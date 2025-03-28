@@ -17,6 +17,7 @@ const Chatbot: React.FC = () => {
     const hasReceivedInitialMessage = useRef(false); // To track if the initial message has been received
 
     useEffect(() => {
+        console.log('Conectando al servidor...');
         socket.current = io('https://e8d0-2806-10be-c-9026-35e4-bf8e-c75b-aced.ngrok-free.app');
 
         socket.current.on('connect', () => {
